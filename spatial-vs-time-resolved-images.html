@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>LEGIT · Spatial vs. Time-Resolved Images: Understanding the Difference</title>
+  <meta name="description" content="How spatial snapshots and time-resolved imaging differ, and why modern SPAD and time-of-flight systems combine both."/>
+  <meta name="author" content="Deborah Akuoko Minka"/>
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/>
+  <link rel="canonical" href="https://2000pd3rvr.github.io/spad-vision-articles/spatial-vs-time-resolved-images.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="LEGIT · Spatial vs. Time-Resolved Images: Understanding the Difference"/>
+  <meta property="og:description" content="How spatial snapshots and time-resolved imaging differ, and why modern SPAD and time-of-flight systems combine both."/>
+  <meta property="og:url" content="https://2000pd3rvr.github.io/spad-vision-articles/spatial-vs-time-resolved-images.html"/>
+  <link rel="sitemap" type="application/xml" href="https://2000pd3rvr.github.io/spad-vision-articles/sitemap.xml"/>
+  <style>
+    :root { color-scheme: dark; --ink:#f3f3f3; --muted:#bababa; --line:#333; --bg:#070707; --accent:#fff; }
+    body { margin:0; font-family: Manrope, system-ui, sans-serif; background:var(--bg); color:var(--ink); line-height:1.65; }
+    main { max-width:44rem; margin:0 auto; padding:2rem 1.25rem 4rem; }
+    h1 { font-family: Georgia, "Iowan Old Style", serif; font-size:clamp(1.8rem,4vw,2.4rem); line-height:1.15; margin:0 0 .75rem; }
+    h2 { font-size:1.15rem; margin:1.75rem 0 .5rem; border-bottom:1px solid var(--line); padding-bottom:.35rem; }
+    h3 { font-size:1rem; margin:1.25rem 0 .35rem; }
+    ul { padding-left:1.1rem; margin:.4rem 0; }
+    li { margin:.28rem 0; }
+    a { color:var(--accent); }
+    .meta { color:var(--muted); font-size:.9rem; margin:0 0 1.25rem; }
+    .back { color:var(--muted); font-size:.9rem; margin:0 0 .5rem; }
+    footer { color:#777; font-size:.85rem; margin-top:2rem; padding-top:1.25rem; border-top:1px solid var(--line); }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="back"><a href="index.html">← Articles</a></p>
+    <h1>Spatial vs. Time-Resolved Images: Understanding the Difference</h1>
+    <p class="meta"><strong>Author:</strong> Deborah Akuoko Minka</p>
+    <p>When we talk about images in computer vision and sensing, there are two main ways to capture information: spatial resolution and time resolution. Understanding the difference between these two approaches is key to understanding how modern vision systems work.</p>
+  <p>Think of it this way: <strong>spatial images</strong> tell you <em>where</em> things are, while <strong>time-resolved images</strong> tell you <em>when</em> things happen and how they change over time.</p>
+  <h2>Spatial Images: The &quot;Where&quot;</h2>
+  <p>Spatial images are what we&#x27;re most familiar with — regular photographs. A spatial image captures information about the position and appearance of objects in space at a single moment in time.</p>
+  <h3>Characteristics of Spatial Images</h3>
+  <ul>
+  <li><strong>They show location</strong> — You can see where objects are positioned relative to each other</li>
+  <li><strong>They capture appearance</strong> — Colors, textures, shapes, and patterns are all visible</li>
+  <li><strong>They&#x27;re like a snapshot</strong> — They freeze a moment in time</li>
+  <li><strong>High detail</strong> — Modern cameras can capture millions of pixels, showing fine details</li>
+  </ul>
+  <p></p>
+  <h3>Examples</h3>
+  <ul>
+  <li>A regular photograph from your phone</li>
+  <li>An X-ray image showing bone structure</li>
+  <li>A satellite image of Earth</li>
+  <li>A microscope image of cells</li>
+  </ul>
+  <p></p>
+  <h2>Time-Resolved Images: The &quot;When&quot;</h2>
+  <p>Time-resolved images capture information about how things change over time. Instead of just showing where something is, they show how it moves, changes, or evolves.</p>
+  <h3>Characteristics of Time-Resolved Images</h3>
+  <ul>
+  <li><strong>They show temporal changes</strong> — You can see how things move or transform</li>
+  <li><strong>They capture dynamics</strong> — Motion, decay, growth, and other time-based phenomena</li>
+  <li><strong>They&#x27;re like a movie</strong> — Multiple snapshots over time create a sequence</li>
+  <li><strong>Temporal precision</strong> — Can capture events happening in nanoseconds or even faster</li>
+  </ul>
+  <p></p>
+  <h3>Examples</h3>
+  <ul>
+  <li>A video showing a ball bouncing</li>
+  <li>A time-lapse of a plant growing</li>
+  <li>A sequence showing how light travels through a material</li>
+  <li>SPAD sensor data showing photon arrival times</li>
+  </ul>
+  <p></p>
+  <h2>Why Both Matter</h2>
+  <p>The real power comes from combining both types of information.</p>
+  <h3>Spatial Images Are Great For</h3>
+  <ul>
+  <li><strong>Recognizing objects</strong> — &quot;That&#x27;s a cat&quot; or &quot;That&#x27;s a car&quot;</li>
+  <li><strong>Understanding structure</strong> — Seeing how parts fit together</li>
+  <li><strong>Detecting patterns</strong> — Finding shapes, textures, or arrangements</li>
+  <li><strong>Navigation</strong> — Knowing where you are and what&#x27;s around you</li>
+  </ul>
+  <p></p>
+  <h3>Time-Resolved Images Are Great For</h3>
+  <ul>
+  <li><strong>Understanding motion</strong> — How fast something is moving, in what direction</li>
+  <li><strong>Detecting changes</strong> — What&#x27;s different from one moment to the next</li>
+  <li><strong>Material properties</strong> — How light interacts with materials over time</li>
+  <li><strong>Depth sensing</strong> — Using time-of-flight to measure distances</li>
+  </ul>
+  <p></p>
+  <h2>The Challenge: Why Not Just Use Spatial Images?</h2>
+  <p>Some information simply can&#x27;t be captured in a single spatial snapshot:</p>
+  <ul>
+  <li><strong>Depth information</strong> — A regular photo is flat; you can&#x27;t tell how far away things are</li>
+  <li><strong>Material properties</strong> — Transparency, reflectivity, and scattering often need temporal data</li>
+  <li><strong>Motion</strong> — A single photo can&#x27;t show speed</li>
+  <li><strong>Hidden features</strong> — Some properties only reveal themselves over time</li>
+  </ul>
+  <p></p>
+  <h2>How They Work Together: Spatiotemporal Detection</h2>
+  <p>Modern vision systems combine both approaches. In material classification:</p>
+  <ul>
+  <li><strong>Spatial features</strong> might tell you: &quot;This looks like a ceramic bowl&quot;</li>
+  <li><strong>Temporal features</strong> might tell you: &quot;Light reflects off this surface in a specific pattern over time&quot;</li>
+  <li><strong>Together</strong>, they support robust material-aware detection</li>
+  </ul>
+  <p></p>
+  <p>See the live demonstration on <a href="https://huggingface.co/spaces/mvplus/spad_for_vision">SPAD for Vision</a> (spatiotemporal detection and material classification demos).</p>
+  <h2>Real-World Applications</h2>
+  <ul>
+  <li><strong>Quality control</strong> — Surface defects (spatial) plus material response over time (temporal)</li>
+  <li><strong>Autonomous systems</strong> — Cameras plus time-resolved depth sensors</li>
+  <li><strong>Medical imaging</strong> — Structure plus flow and motion</li>
+  <li><strong>Security</strong> — Identity (spatial) plus behaviour over time (temporal)</li>
+  </ul>
+  <p></p>
+  <h2>Technology Behind It</h2>
+  <p><strong>Spatial imaging:</strong> CCD/CMOS cameras, high-resolution sensors, multi-spectral imagers.</p>
+  <p><strong>Time-resolved imaging:</strong> SPAD sensors (single-photon timing), time-of-flight sensors, high-speed cameras, picosecond-scale detectors.</p>
+  <h2>Conclusion</h2>
+  <p>Spatial images tell us <em>where</em> things are and <em>what</em> they look like. Time-resolved images tell us <em>when</em> things happen and <em>how</em> they change. The most capable vision systems use both together — as demonstrated in SPAD-based material detection research.</p>
+  <p><strong>Deborah Akuoko Minka</strong> — signal processing and machine intelligence researcher (University of Edinburgh). <a href="https://orcid.org/0009-0008-6219-154X">ORCID</a> · <a href="https://deborahakuokominka.wordpress.com/">WordPress</a> · <a href="https://github.com/2000pd3rvr">GitHub</a></p>
+    <footer>
+      <p><strong>Deborah Akuoko Minka</strong> — signal processing &amp; machine intelligence (University of Edinburgh).
+      <a href="https://orcid.org/0009-0008-6219-154X">ORCID</a></p>
+    </footer>
+  </main>
+</body>
+</html>

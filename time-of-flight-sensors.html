@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>LEGIT · Time-of-Flight Sensors: A Simple Guide</title>
+  <meta name="description" content="A plain-language guide to time-of-flight distance sensing: how pulses measure range, common sensor types, and typical applications."/>
+  <meta name="author" content="Deborah Akuoko Minka"/>
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/>
+  <link rel="canonical" href="https://2000pd3rvr.github.io/spad-vision-articles/time-of-flight-sensors.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="LEGIT · Time-of-Flight Sensors: A Simple Guide"/>
+  <meta property="og:description" content="A plain-language guide to time-of-flight distance sensing: how pulses measure range, common sensor types, and typical applications."/>
+  <meta property="og:url" content="https://2000pd3rvr.github.io/spad-vision-articles/time-of-flight-sensors.html"/>
+  <link rel="sitemap" type="application/xml" href="https://2000pd3rvr.github.io/spad-vision-articles/sitemap.xml"/>
+  <style>
+    :root { color-scheme: dark; --ink:#f3f3f3; --muted:#bababa; --line:#333; --bg:#070707; --accent:#fff; }
+    body { margin:0; font-family: Manrope, system-ui, sans-serif; background:var(--bg); color:var(--ink); line-height:1.65; }
+    main { max-width:44rem; margin:0 auto; padding:2rem 1.25rem 4rem; }
+    h1 { font-family: Georgia, "Iowan Old Style", serif; font-size:clamp(1.8rem,4vw,2.4rem); line-height:1.15; margin:0 0 .75rem; }
+    h2 { font-size:1.15rem; margin:1.75rem 0 .5rem; border-bottom:1px solid var(--line); padding-bottom:.35rem; }
+    h3 { font-size:1rem; margin:1.25rem 0 .35rem; }
+    ul { padding-left:1.1rem; margin:.4rem 0; }
+    li { margin:.28rem 0; }
+    a { color:var(--accent); }
+    .meta { color:var(--muted); font-size:.9rem; margin:0 0 1.25rem; }
+    .back { color:var(--muted); font-size:.9rem; margin:0 0 .5rem; }
+    footer { color:#777; font-size:.85rem; margin-top:2rem; padding-top:1.25rem; border-top:1px solid var(--line); }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="back"><a href="index.html">← Articles</a></p>
+    <h1>Time-of-Flight Sensors: A Simple Guide</h1>
+    <p class="meta"><strong>Author:</strong> Deborah Akuoko Minka</p>
+    <p>A time-of-flight (ToF) sensor measures distance by timing how long it takes for light to travel to an object and bounce back — like echolocation, but with light.</p>
+  <p>The sensor sends out a pulse of light, waits for it to return, and calculates distance from travel time. Because light speed is constant (~300,000 km/s), range follows directly from elapsed time.</p>
+  <h2>How Do They Work?</h2>
+  <h3>Direct Time-of-Flight (dToF)</h3>
+  <p>Direct ToF sensors measure the actual round-trip time of a light pulse:</p>
+  <p><strong>Distance = (Speed of Light × Time) ÷ 2</strong></p>
+  <p>The division by two accounts for the round trip to the object and back.</p>
+  <h3>Indirect Time-of-Flight (iToF)</h3>
+  <p>Indirect ToF uses continuous waves and measures phase difference between emitted and returned light — suited to video-rate depth maps.</p>
+  <h2>What Makes Them Special?</h2>
+  <ul>
+  <li><strong>Fast</strong> — Many measurements per second for real-time use</li>
+  <li><strong>Compact</strong> — Modern ToF can fit on a single chip</li>
+  <li><strong>Robust lighting</strong> — Often works in dim conditions</li>
+  <li><strong>Per-pixel depth</strong> — A depth value for every pixel in the scene</li>
+  </ul>
+  <p></p>
+  <h2>Where Are They Used?</h2>
+  <ul>
+  <li><strong>Smartphones</strong> — Portrait mode, AR, gestures</li>
+  <li><strong>Gaming</strong> — Body tracking and motion control</li>
+  <li><strong>Autonomous vehicles</strong> — Obstacle ranging and navigation</li>
+  <li><strong>Robotics</strong> — Mapping and manipulation</li>
+  <li><strong>Industry</strong> — Quality control and dimensional inspection</li>
+  </ul>
+  <p></p>
+  <h2>SPAD Arrays</h2>
+  <p>Advanced ToF systems use <strong>Single-Photon Avalanche Diode (SPAD)</strong> arrays that detect individual photons with sub-nanosecond timing — enabling millimetre accuracy at useful ranges and supporting SPAD-based vision research demos on <a href="https://huggingface.co/spaces/mvplus/spad_for_vision">SPAD for Vision</a>.</p>
+  <h3>CMOS ToF</h3>
+  <p>Consumer ToF often uses integrated CMOS chips for cost-effective, compact depth sensing.</p>
+  <h2>Limitations</h2>
+  <ul>
+  <li><strong>Range</strong> — Best at short to medium distances (often up to ~10 m)</li>
+  <li><strong>Specular surfaces</strong> — Mirrors and shiny materials can confuse returns</li>
+  <li><strong>Bright ambient light</strong> — Can saturate or interfere with active illumination</li>
+  <li><strong>Power</strong> — Active illumination uses more energy than passive cameras</li>
+  </ul>
+  <p></p>
+  <h2>Why They Matter for Vision Research</h2>
+  <p>ToF adds depth that RGB alone cannot provide. Combined with spatial imaging, it supports:</p>
+  <ul>
+  <li>Better object recognition and segmentation</li>
+  <li>Material-aware sensing when fused with time-resolved transients</li>
+  <li>Safer autonomous and robotic systems</li>
+  <li>Improved manufacturing inspection</li>
+  </ul>
+  <p></p>
+  <h2>Conclusion</h2>
+  <p>Time-of-flight sensors turn the speed of light into distance maps. Paired with spatial cameras and SPAD timing, they underpin modern spatiotemporal and material-classification pipelines — explore working examples on the <a href="https://huggingface.co/spaces/mvplus/spad_for_vision">SPAD for Vision demo space</a>.</p>
+  <p><strong>Deborah Akuoko Minka</strong> — signal processing and machine intelligence researcher (University of Edinburgh). <a href="https://orcid.org/0009-0008-6219-154X">ORCID</a> · <a href="https://deborahakuokominka.wordpress.com/">WordPress</a> · <a href="https://github.com/2000pd3rvr">GitHub</a></p>
+    <footer>
+      <p><strong>Deborah Akuoko Minka</strong> — signal processing &amp; machine intelligence (University of Edinburgh).
+      <a href="https://orcid.org/0009-0008-6219-154X">ORCID</a></p>
+    </footer>
+  </main>
+</body>
+</html>

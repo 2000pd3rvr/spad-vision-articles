@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://2000pd3rvr.github.io/spad-vision-articles/sitemap.xml
