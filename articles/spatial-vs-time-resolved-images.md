@@ -97,7 +97,3 @@ See the live demonstration on [SPAD for Vision](https://huggingface.co/spaces/mv
 ## Conclusion
 
 Spatial images tell us *where* things are and *what* they look like. Time-resolved images tell us *when* things happen and *how* they change. The most capable vision systems use both together — as demonstrated in SPAD-based material detection research.
-
----
-
-**Deborah Akuoko Minka** — signal processing and machine intelligence researcher (University of Edinburgh). [ORCID](https://orcid.org/0009-0008-6219-154X) · [WordPress](https://deborahakuokominka.wordpress.com/) · [GitHub](https://github.com/2000pd3rvr)
