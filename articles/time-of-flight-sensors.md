@@ -64,7 +64,3 @@ ToF adds depth that RGB alone cannot provide. Combined with spatial imaging, it 
 ## Conclusion
 
 Time-of-flight sensors turn the speed of light into distance maps. Paired with spatial cameras and SPAD timing, they underpin modern spatiotemporal and material-classification pipelines — explore working examples on the [SPAD for Vision demo space](https://huggingface.co/spaces/mvplus/spad_for_vision).
-
----
-
-**Deborah Akuoko Minka** — signal processing and machine intelligence researcher (University of Edinburgh). [ORCID](https://orcid.org/0009-0008-6219-154X) · [WordPress](https://deborahakuokominka.wordpress.com/) · [GitHub](https://github.com/2000pd3rvr)
